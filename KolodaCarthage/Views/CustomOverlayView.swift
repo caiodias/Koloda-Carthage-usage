@@ -14,21 +14,19 @@ private let overlayLeftImageName = "overlay_skip"
 
 class CustomOverlayView: OverlayView {
 
-    @IBOutlet lazy var overlayImageView: UIImageView! = {
-        [unowned self] in
-        
+    @IBOutlet lazy var overlayImageView: UIImageView! = { [unowned self] in
         var imageView = UIImageView(frame: self.bounds)
         self.addSubview(imageView)
         
         return imageView
-        }()
+    }()
     
     override var overlayState: SwipeResultDirection?  {
         didSet {
             switch overlayState {
-            case .Left? :
+            case .left? :
                 overlayImageView.image = UIImage(named: overlayLeftImageName)
-            case .Right? :
+            case .right? :
                 overlayImageView.image = UIImage(named: overlayRightImageName)
             default:
                 overlayImageView.image = nil

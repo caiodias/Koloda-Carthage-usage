@@ -10,8 +10,6 @@
 		C51B175C1D6AE986002CBBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51B175B1D6AE986002CBBDD /* AppDelegate.swift */; };
 		C51B175E1D6AE986002CBBDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51B175D1D6AE986002CBBDD /* ViewController.swift */; };
 		C51B17611D6AE986002CBBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51B175F1D6AE986002CBBDD /* Main.storyboard */; };
-		C51B176F1D6AECC6002CBBDD /* Koloda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51B176D1D6AECC6002CBBDD /* Koloda.framework */; };
-		C51B17701D6AECC6002CBBDD /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51B176E1D6AECC6002CBBDD /* pop.framework */; };
 		C51B17821D6AEF70002CBBDD /* BackgroundAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51B17731D6AEF70002CBBDD /* BackgroundAnimationViewController.swift */; };
 		C51B178B1D6AEF70002CBBDD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C51B17801D6AEF70002CBBDD /* Images.xcassets */; };
 		C51B17911D6AF03B002CBBDD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51B178D1D6AF03B002CBBDD /* LaunchScreen.xib */; };
@@ -21,6 +19,7 @@
 		C51B179D1D6AF0C4002CBBDD /* CustomOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51B17971D6AF0C4002CBBDD /* CustomOverlayView.xib */; };
 		C51B179E1D6AF0C4002CBBDD /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51B17981D6AF0C4002CBBDD /* ExampleOverlayView.swift */; };
 		C51B179F1D6AF0C4002CBBDD /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C51B17991D6AF0C4002CBBDD /* OverlayView.xib */; };
+		C569A5EC1D9E3AC700347E27 /* pop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51B176E1D6AECC6002CBBDD /* pop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51B176F1D6AECC6002CBBDD /* Koloda.framework in Frameworks */,
-				C51B17701D6AECC6002CBBDD /* pop.framework in Frameworks */,
+				C569A5EC1D9E3AC700347E27 /* pop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,11 +136,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Yalantis;
 				TargetAttributes = {
 					C51B17571D6AE986002CBBDD = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -249,8 +248,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -294,8 +295,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -314,6 +317,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -330,6 +334,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yalantis.KolodaCarthage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -345,6 +350,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yalantis.KolodaCarthage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -367,6 +373,7 @@
 				C51B176C1D6AE986002CBBDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
